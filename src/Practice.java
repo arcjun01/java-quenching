@@ -11,7 +11,20 @@ public class Practice {
      * @return the sum of the odd numbers in the array
      */
     public static int oddSum(int[] nums) {
-        return 0;
+        int sum = 0;
+
+        if (nums == null) 
+        {
+            return 0;
+        }
+        for (int num : nums) 
+        {
+            if (num % 2 != 0)
+            {
+                sum += num;
+            }
+        }
+        return sum;
     }
 
     /**
@@ -20,7 +33,7 @@ public class Practice {
      * If multiple words are tied for shortest, returns the one that is smallest
      * lexicographically.
      * 
-     * @param words a set of words
+     * @param words a set of word
      * @return the shortest word in the set with a lexicographic tiebreaker
      * @throws IllegalArgumentException if words is empty
      * @throws NullPointerException if words is null
